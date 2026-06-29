@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEXUS — Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-bar">
+      <div class="loader-fill" id="loaderFill"></div>
+    </div>
+    <div class="loader-text" id="loaderText">INITIALIZING...</div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Canvas Background -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">NX<span class="accent">.</span></div>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span class="status-text">Available for hire</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-eyebrow">
+      <span class="mono">FULL STACK ENGINEER</span>
+      <span class="divider">—</span>
+      <span class="mono">10 YEARS EXP.</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line" data-text="I build">I build</span>
+      <span class="line accent-line" data-text="things that">things that</span>
+      <span class="line" data-text="scale.">scale.</span>
+    </h1>
+
+    <p class="hero-sub">
+      Systems architect. Product engineer. The person companies call<br/>
+      when the last team couldn't make it work.
+    </p>
+
+    <div class="hero-cta">
+      <button class="btn-primary" id="ctaBtn">See My Work</button>
+      <button class="btn-ghost" id="contactBtn">Let's Talk</button>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num" data-target="127">0</span>
+        <span class="stat-label">Projects shipped</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-target="40">0</span><span class="stat-suffix">M+</span>
+        <span class="stat-label">Users reached</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-target="99">0</span><span class="stat-suffix">%</span>
+        <span class="stat-label">Uptime delivered</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <span>React</span><span class="dot">·</span>
+      <span>Next.js</span><span class="dot">·</span>
+      <span>Node.js</span><span class="dot">·</span>
+      <span>Python</span><span class="dot">·</span>
+      <span>PostgreSQL</span><span class="dot">·</span>
+      <span>MongoDB</span><span class="dot">·</span>
+      <span>Docker</span><span class="dot">·</span>
+      <span>AWS</span><span class="dot">·</span>
+      <span>TypeScript</span><span class="dot">·</span>
+      <span>GraphQL</span><span class="dot">·</span>
+      <span>Redis</span><span class="dot">·</span>
+      <span>Kubernetes</span><span class="dot">·</span>
+      <span>React</span><span class="dot">·</span>
+      <span>Next.js</span><span class="dot">·</span>
+      <span>Node.js</span><span class="dot">·</span>
+      <span>Python</span><span class="dot">·</span>
+      <span>PostgreSQL</span><span class="dot">·</span>
+      <span>MongoDB</span><span class="dot">·</span>
+      <span>Docker</span><span class="dot">·</span>
+      <span>AWS</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- WORK -->
+  <section class="section" id="work">
+    <div class="section-header">
+      <span class="section-eyebrow mono">SELECTED WORK</span>
+      <h2 class="section-title">What I've built</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card large" data-index="01">
+        <div class="project-img">
+          <div class="project-mockup mockup-one">
+            <div class="mock-bar"></div>
+            <div class="mock-content">
+              <div class="mock-line w80"></div>
+              <div class="mock-line w60"></div>
+              <div class="mock-chart">
+                <div class="bar" style="height:40%"></div>
+                <div class="bar" style="height:70%"></div>
+                <div class="bar" style="height:55%"></div>
+                <div class="bar" style="height:90%"></div>
+                <div class="bar" style="height:65%"></div>
+                <div class="bar" style="height:80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">SaaS · Fintech</span>
+          <h3 class="project-name">Vaultline</h3>
+          <p class="project-desc">Real-time payment infrastructure handling 2M+ daily transactions. Built from zero with Node, Postgres, and a custom event-sourcing layer.</p>
+          <div class="project-stack">
+            <span>Node.js</span><span>PostgreSQL</span><span>Redis</span><span>AWS</span>
+          </div>
+          <a class="project-link" href="#">View Case Study →</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-index="02">
+        <div class="project-img">
+          <div class="project-mockup mockup-two">
+            <div class="mock-bar"></div>
+            <div class="mock-content">
+              <div class="mock-cards">
+                <div class="mini-card"></div>
+                <div class="mini-card"></div>
+                <div class="mini-card"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Platform · E-Commerce</span>
+          <h3 class="project-name">Stackd</h3>
+          <p class="project-desc">Multi-vendor marketplace. 500K users at launch.</p>
+          <div class="project-stack">
+            <span>Next.js</span><span>MongoDB</span><span>Stripe</span>
+          </div>
+          <a class="project-link" href="#">View Case Study →</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-index="03">
+        <div class="project-img">
+          <div class="project-mockup mockup-three">
+            <div class="mock-bar"></div>
+            <div class="mock-content">
+              <div class="mock-code">
+                <span class="code-kw">const</span> api <span class="code-op">=</span> <span class="code-fn">createServer</span>()<br/>
+                <span class="code-kw">await</span> api<span class="code-op">.</span><span class="code-fn">listen</span>(<span class="code-num">3000</span>)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">API · Infrastructure</span>
+          <h3 class="project-name">Axon API</h3>
+          <p class="project-desc">Open-source REST framework. 8K GitHub stars.</p>
+          <div class="project-stack">
+            <span>TypeScript</span><span>GraphQL</span><span>Docker</span>
+          </div>
+          <a class="project-link" href="#">View Case Study →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section-header">
+      <span class="section-eyebrow mono">CAPABILITIES</span>
+      <h2 class="section-title">The stack</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title mono">FRONTEND</div>
+        <div class="skill-items">
+          <div class="skill-item" data-level="98">
+            <div class="skill-name">React / Next.js</div>
+            <div class="skill-bar"><div class="skill-fill" data-target="98"></div></div>
+          </div>
+          <div class="skill-item" data-level="95">
+            <div class="skill-name">TypeScript</div>
+            <div class="skill-bar"><div class="skill-fill" data-target="95"></div></div>
+          </div>
+          <div class="skill-item" data-level="92">
+            <div class="skill-name">CSS / Animation</div>
+            <div class="skill-bar"><div class="skill-fill" data-target="92"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title mono">BACKEND</div>
+        <div class="skill-items">
+          <div class="skill-item" data-level="97">
+            <div class="skill-name">Node.js / Express</div>
+            <div class="skill-bar"><div class="skill-fill" data-target="97"></div></div>
+          </div>
+          <div class="skill-item" data-level="90">
+            <div class="skill-name">Python / FastAPI</div>
+            <div class="skill-bar"><div class="skill-fill" data-target="90"></div></div>
+          </div>
+          <div class="skill-item" data-level="88">
+            <div class="skill-name">GraphQL</div>
+            <div class="skill-bar"><div class="skill-fill" data-target="88"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title mono">INFRASTRUCTURE</div>
+        <div class="skill-items">
+          <div class="skill-item" data-level="94">
+            <div class="skill-name">AWS / GCP</div>
+            <div class="skill-bar"><div class="skill-fill" data-target="94"></div></div>
+          </div>
+          <div class="skill-item" data-level="91">
+            <div class="skill-name">Docker / Kubernetes</div>
+            <div class="skill-bar"><div class="skill-fill" data-target="91"></div></div>
+          </div>
+          <div class="skill-item" data-level="93">
+            <div class="skill-name">PostgreSQL / Redis</div>
+            <div class="skill-bar"><div class="skill-fill" data-target="93"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about-section" id="about">
+    <div class="about-grid">
+      <div class="about-left">
+        <span class="section-eyebrow mono">ABOUT</span>
+        <h2 class="section-title">I don't just write code.<br/>I solve problems.</h2>
+        <p class="about-body">
+          Ten years. Startups, scale-ups, enterprise teams. I've been in the room when systems fail at 3AM and I've been the one who fixed them before anyone noticed. I think in systems, communicate in plain English, and ship things that last.
+        </p>
+        <p class="about-body">
+          I don't need hand-holding. Give me the brief, the timeline, and the standard — I'll handle everything else.
+        </p>
+        <div class="about-tags">
+          <span class="tag">Systems thinking</span>
+          <span class="tag">Scalable architecture</span>
+          <span class="tag">Zero-to-one</span>
+          <span class="tag">Team lead</span>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+            <span class="t-title mono">terminal</span>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <div class="t-line"><span class="t-prompt">~$</span> <span class="t-cmd" id="termCmd"></span><span class="t-cursor">|</span></div>
+            <div class="t-output" id="termOutput"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <div class="contact-inner">
+      <span class="section-eyebrow mono">CONTACT</span>
+      <h2 class="contact-title">Let's build something<br/><span class="accent">worth shipping.</span></h2>
+      <p class="contact-sub">Drop the brief. I'll respond within 24 hours.</p>
+      <div class="contact-form">
+        <div class="input-group">
+          <input type="text" class="form-input" placeholder="Your name" id="nameInput"/>
+        </div>
+        <div class="input-group">
+          <input type="email" class="form-input" placeholder="Your email" id="emailInput"/>
+        </div>
+        <div class="input-group">
+          <textarea class="form-input form-textarea" placeholder="Tell me what you're building..." id="msgInput"></textarea>
+        </div>
+        <button class="btn-primary full-width" id="sendBtn">Send Message →</button>
+        <div class="form-status" id="formStatus"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left mono">© 2026 NEXUS DEV</div>
+    <div class="footer-center">Built with intent.</div>
+    <div class="footer-right mono">v2.0.1</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
